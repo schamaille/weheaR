@@ -48,7 +48,7 @@ convert_dat <- function(filenames,file_type="rds",dir_in=NULL,dir_out=NULL,id=NU
   # extract time info from filenames
   in_ftime <- stringr::str_sub(filenames,start=nchar(filenames)-16,end=nchar(filenames)-4)
   ref_time <- lubridate::dmy_hms(in_ftime,tz=tz)
-  out_ftime <- format(true_time,"%Y%m%d_%H%M%S") # this could later be removed if filenames are adjusted, and we could use time_info straight
+  out_ftime <- format(ref_time,"%Y%m%d_%H%M%S") # this could later be removed if filenames are adjusted, and we could use time_info straight
 
   # adjust file names
   ext <- ifelse(file_type=="rds",".rds",".csv")

@@ -8,12 +8,13 @@
 #' @export
 #'
 #' @examples
+#' @import ggplot2
 plot_inertial_ts <- function(df,title=""){
 
-  requireNamespace("tidyr")
-  requireNamespace("ggplot2")
+  #requireNamespace("tidyr")
+  #requireNamespace("ggplot2")
 
-  dfl <- pivot_longer(df,cols=c("x","y","z"),names_to="axis")
+  dfl <- tidyr::pivot_longer(df,cols=c("x","y","z"),names_to="axis")
 
   ggplot(dfl,aes(time,value,color=axis))+
     geom_line()+
