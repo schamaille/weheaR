@@ -1,0 +1,48 @@
+---
+title: "Wrangling with files from the wehear logger"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{wrangling_with_files}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+If you are here to learn about the weheaR package, it would be good to load it ;-)
+
+```{r setup}
+library(weheaR)
+```
+
+# Audio files
+
+
+# Files from the inertial sensor (accelerometer and magnetometer)
+
+Let's load a .DAT file coming from the magnetometer:
+
+```{r import mag}
+mag_dat_file <- system.file("extdata", "MAG_050721_213235.DAT", package = "weheaR")
+```
+
+Now we can convert it:
+
+```{r convert mag}
+temp_dir <- tempdir()
+convert_dat(filenames=mag_dat_file,
+            file_type="rds",
+            dir_out=temp_dir,
+            tz=+2)
+```
+
+
+
+
+
+
