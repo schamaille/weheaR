@@ -4,22 +4,17 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of weheaR is to ...
+The weheaR package provides some useful functions to work with the wehear logger <insert site web> or its data.
 
 ## Installation
 
-You can install the released version of weheaR from [CRAN](https://CRAN.R-project.org) with:
+Note: Although not a fully-converted fan of the tidyverse, I (and therefore functions of this package) still rely on functions from readr, dplyr...packages. I also use 'lubridate' regularly. Installing the weheaR package will b
 
+Install the latest version of the package from github:
 ``` r
-install.packages("weheaR")
+devtools::install_github("schamaille/weheaR")
 ```
 
-## Example
+## Vignettes
 
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(weheaR)
-## basic example code
-```
-
+When they will be available, check the vignettes to learn about how to use the package!
