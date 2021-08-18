@@ -13,7 +13,7 @@ Note: Although not a fully-converted fan of the tidyverse, I (and therefore func
 
 Install the latest version of the package from github:
 ``` r
-devtools::install_github("schamaille/weheaR")
+devtools::install_github("schamaille/weheaR",build_vignettes = TRUE)
 ```
 
 ## Vignettes
