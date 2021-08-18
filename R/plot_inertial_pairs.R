@@ -14,6 +14,8 @@
 #' @examples
 plot_inertial_pairs <- function(df,title="",radius=NULL,lim=NULL){
 
+  requireNamespace("ggplot")
+
   foo <- convert_to_pairs(df)
 
   if(is.null(radius)){
