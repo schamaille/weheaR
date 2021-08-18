@@ -18,8 +18,8 @@
 #' @examples
 convert_dat <- function(filenames,file_type="rds",dir_in=NULL,dir_out=NULL,id=NULL,tz=NULL){
 
-  requireNamespace(lubridate) # later do without?
-  requireNamespace(stringr)
+  requireNamespace("lubridate") # later do without?
+  requireNamespace("stringr")
   if(file_type!="rds"){
     requireNamespace(readr) # readr is ~3* quicker than base R for this, worth it with many files
   }

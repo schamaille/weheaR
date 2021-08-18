@@ -10,8 +10,8 @@
 #' @examples
 plot_inertial_ts <- function(df,title=""){
 
-  requireNamespace(tidyr)
-  requireNamespace(ggplot2)
+  requireNamespace("tidyr")
+  requireNamespace("ggplot2")
 
   dfl <- pivot_longer(df,cols=c("x","y","z"),names_to="axis")
 

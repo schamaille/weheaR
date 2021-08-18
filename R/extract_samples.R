@@ -14,7 +14,7 @@
 #' @examples
 extract_samples <- function(labels,path_audio,path_extracts=getwd(),ext_audio=".wav"){
 
-  requireNamespace(tuneR)
+  requireNamespace("tuneR")
 
   # check if labels object has an id field,
   # if not, create one

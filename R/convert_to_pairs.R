@@ -11,7 +11,7 @@
 #' @examples
 convert_to_pairs <- function(df){
 
-  requireNamespace(dplyr)
+  requireNamespace("dplyr")
 
   df1 <- df %>%
     mutate(pair="x-y") %>%
