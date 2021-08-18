@@ -19,13 +19,13 @@ sync <- function(port="auto"){
     if(Sys.info()['sysname']=="Linux"){
       port <- "ttyUSB0"
     } else {
-      list_port <- serial::listPorts()
+      list_port <- listPorts()
       port <- utils::tail(list_port,n=1) # the last port is assumed to be the right port
     }
   }
 
   # create USB-TTL connection
-  con <- serial::serialConnection(name = "wehear",
+  con <- serialConnection(name = "wehear",
                                   port = port,
                                   mode = "115200,n,8,1",buffering = "none",newline = 0,
                                   translation = "auto")
@@ -43,13 +43,13 @@ sync <- function(port="auto"){
     Sys.sleep(0.1)
 
     # Display incoming bytes just like in any terminal
-    new_out <- serial::read.serialConnection(con,100)
+    new_out <- read.serialConnection(con,100)
     if(nchar(new_out)>0 & nchar(new_out) < 40){ # the <40 is to prevent printing the first buffer obtained
       cat("\r\n", new_out, "\r\n")
     }
 
     if(!isTRUE(sync_done) & Sys.time()>change_time){
-      serial::write.serialConnection(con,paste0("*",format(Sys.time(), "%d/%m/%Y - %H:%M:%S"),"*"))
+      write.serialConnection(con,paste0("*",format(Sys.time(), "%d/%m/%Y - %H:%M:%S"),"*"))
       sync_done <- TRUE
     }
   }

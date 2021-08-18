@@ -2,5 +2,6 @@
 
 export(convert_dat)
 export(convert_to_pairs)
+export(plot_inertial_pairs)
 export(plot_inertial_ts)
 export(sync)

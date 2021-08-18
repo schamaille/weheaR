@@ -4,7 +4,8 @@
 #' are more easily accessible. Mostly for internal use in other functions.
 #' @param df data.frame containing the data. Needs to have x,y, and z columns
 #'
-#' @return
+#' @return a data.frame with columns axis1, axis2 and pair (e.g. "x-y"). axis1 is the first of the two axes
+#' of the pair, axis2 the second
 #' @export
 #'
 #' @examples

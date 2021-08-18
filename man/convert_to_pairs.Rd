@@ -10,7 +10,8 @@ convert_to_pairs(df)
 \item{df}{data.frame containing the data. Needs to have x,y, and z columns}
 }
 \value{
-
+a data.frame with columns axis1, axis2 and pair (e.g. "x-y"). axis1 is the first of the two axes
+of the pair, axis2 the second
 }
 \description{
 This function reformats a data.frame containing inertial data so that values for pairs of axes
