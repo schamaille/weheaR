@@ -5,6 +5,7 @@
 <!-- badges: end -->
 
 The weheaR package provides some useful functions to work with the wehear logger <insert site web> or its data.
+It is still in development, so please report bugs, suggestions...
 
 ## Installation
 

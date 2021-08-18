@@ -2,6 +2,9 @@
 
 export(convert_dat)
 export(convert_to_pairs)
+export(extract_samples)
+export(import_labels)
 export(plot_inertial_pairs)
 export(plot_inertial_ts)
 export(sync)
+import(tuneR)
