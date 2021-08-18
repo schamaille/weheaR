@@ -16,13 +16,14 @@
 #' @export
 #'
 #' @examples
+#'
 convert_dat <- function(filenames,file_type="rds",dir_in=NULL,dir_out=NULL,id=NULL,tz=NULL){
 
-  requireNamespace("lubridate") # later do without?
-  requireNamespace("stringr")
-  if(file_type!="rds"){
-    requireNamespace("readr") # readr is ~3* quicker than base R for this, worth it with many files
-  }
+  # requireNamespace("lubridate") # later do without?
+  # requireNamespace("stringr")
+  # if(file_type!="rds"){
+  #   requireNamespace("readr") # readr is ~3* quicker than base R for this, worth it with many files
+  # }
 
   # time-zone check and time zone definition if tz is numeric
   # Important note: the sign is intentionally inverted in the definition, see
@@ -45,8 +46,8 @@ convert_dat <- function(filenames,file_type="rds",dir_in=NULL,dir_out=NULL,id=NU
   }
 
   # extract time info from filenames
-  in_ftime <- str_sub(filenames,start=nchar(filenames)-16,end=nchar(filenames)-4)
-  ref_time <- dmy_hms(in_ftime,tz=tz)
+  in_ftime <- stringr::str_sub(filenames,start=nchar(filenames)-16,end=nchar(filenames)-4)
+  ref_time <- lubridate::dmy_hms(in_ftime,tz=tz)
   out_ftime <- format(true_time,"%Y%m%d_%H%M%S") # this could later be removed if filenames are adjusted, and we could use time_info straight
 
   # adjust file names
@@ -85,7 +86,7 @@ convert_dat <- function(filenames,file_type="rds",dir_in=NULL,dir_out=NULL,id=NU
       saveRDS(obj,fname,compress=T)
     } else {
       obj$time <- as.character(obj$time)
-      write_csv(obj,fname)
+      readr::write_csv(obj,fname)
     }
   }
 

@@ -35,3 +35,6 @@ files with converted data
 This function convert the original .DAT files containing accelerometer or magnetometer data
 into either rds (by default) or csv files.
 }
+\examples{
+
+}
