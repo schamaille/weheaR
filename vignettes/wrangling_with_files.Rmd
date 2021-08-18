@@ -34,9 +34,13 @@ mag_dat_file <- system.file("extdata", "MAG_050721_213235.DAT", package = "wehea
 Now we can convert it:
 
 ```{r convert mag}
+# First, replace tempdir() below with the path of a directory
+# where you want to write the converted file
 temp_dir <- tempdir()
-convert_dat(filenames=mag_dat_file,
+
+convert_dat(filenames="MAG_050721_213235.DAT",
             file_type="rds",
+            dir_in=system.file("extdata", package = "weheaR"),
             dir_out=temp_dir,
             tz=+2)
 ```
