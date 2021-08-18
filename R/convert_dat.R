@@ -100,7 +100,7 @@ convert_dat <- function(filenames,file_type="rds",dir_in=NULL,dir_out=NULL,id=NU
     temp$ms <- temp$ms_to_on-temp$ms_to_on[1]
 
     # create time vector of records
-    temp$time <- ref_time[i]+milliseconds(temp$ms)
+    temp$time <- ref_time[i]+lubridate::milliseconds(temp$ms)
 
     # write file
     write_converted(temp[,c(6,5,1:4)],full_out_filenames[i])
