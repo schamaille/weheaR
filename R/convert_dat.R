@@ -12,7 +12,7 @@
 #' indicating the number of hours to add/subtract to UTC time (e.g., -1 for times that would be UTC-1).
 #'
 #'
-#' @return
+#' @return files with converted data
 #' @export
 #'
 #' @examples

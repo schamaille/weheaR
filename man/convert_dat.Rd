@@ -29,7 +29,7 @@ tz could be either a character string being a time zone code (e.g., "Europe/Pari
 indicating the number of hours to add/subtract to UTC time (e.g., -1 for times that would be UTC-1).}
 }
 \value{
-
+files with converted data
 }
 \description{
 This function convert the original .DAT files containing accelerometer or magnetometer data
