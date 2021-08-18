@@ -1,6 +1,6 @@
 #' sync
 #'
-#'This functions serves to synchronise the wehear logger with the clock of a computer
+#' This functions serves to synchronise the wehear logger with the clock of a computer
 #' @param port character string; either "auto" (default), which will use the last port (windows)
 #' or the ttyUSB0 port (linux), or directly the name of a port (e.g., COM3)
 #'
@@ -35,7 +35,7 @@ sync <- function(port="auto"){
   # do sync
   change_time <- Sys.time()+5
   sync_done <- FALSE
-  stop_time <- Sys.time()+10
+  stop_time <- Sys.time()+50
 
   while(Sys.time() < stop_time){
 
