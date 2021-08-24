@@ -7,6 +7,8 @@
 import_labels(filenames, fullpath_id = FALSE)
 }
 \arguments{
+\item{filenames}{vector of filenames (label files). Full path or files will be looked for in the working directory}
+
 \item{fullpath_id}{boolean; Should the full path of the audio file
 be returned in the file, or only the file name (without extension)?}
 }
@@ -15,7 +17,6 @@ be returned in the file, or only the file name (without extension)?}
 }
 \description{
 This function imports label files obtained when using Audacity to annotate audio files.
-#' @param filenames vector of filenames (label files). Full path or files will be looked for in the working directory
 }
 \details{
 If filenames is a vector of files, these files are appended in

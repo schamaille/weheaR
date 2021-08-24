@@ -1,10 +1,10 @@
 #' import_labels
 #'
 #' This function imports label files obtained when using Audacity to annotate audio files.
-#' #' @param filenames vector of filenames (label files). Full path or files will be looked for in the working directory
+#' @param filenames vector of filenames (label files). Full path or files will be looked for in the working directory
 #' @param fullpath_id boolean; Should the full path of the audio file
 #' be returned in the file, or only the file name (without extension)?
-#'@details If filenames is a vector of files, these files are appended in
+#' @details If filenames is a vector of files, these files are appended in
 #' on single dataframe. The .txt extension is removed at the end of the
 #' filenames so that one could easily add an extension and grab the audio
 #' files corresponding to the label files.

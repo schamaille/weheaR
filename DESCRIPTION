@@ -1,5 +1,5 @@
 Package: weheaR
-Title: UTILITY FUNCTIONS FOR THE WEHEAR LOGGER
+Title: Utility functions for the wehear logger
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Simon",
