@@ -66,6 +66,8 @@ convert_dat <- function(filenames,file_type="rds",dir_in=NULL,dir_out=NULL,id=NU
 
     if(!is.null(dir_out)){
       full_out_filenames <- paste0(dir_out,"/",out_filenames)
+    } else {
+      full_out_filenames <- out_filenames
     }
 
   # function to uncompress the files
