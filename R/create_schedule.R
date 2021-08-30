@@ -1,6 +1,6 @@
 #' create_schedule
 #'
-#' @param default
+#' @param default default mode (1: on, 0: off) when the time is not wt
 #' @param period
 #' @param hour_on
 #' @param hour_off
