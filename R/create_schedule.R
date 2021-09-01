@@ -20,11 +20,11 @@ create_schedule <- function(default=1,period=NULL,hour_on=NULL,hour_off=NULL,tes
 
   for(i in seq_along(period)){
     days <- seq.Date(from=period[1],to=period[2],by="1 day")
-    start_times <- days+hours(hour_on)
+    start_times <- days+lubridate::hours(hour_on)
     if(hour_off>hour_on){
-      end_times <- days+hours(hour_off)
+      end_times <- days+lubridate::hours(hour_off)
     } else {
-      end_times <- days+days(1)+hours(hour_off)
+      end_times <- days+lubridate::days(1)+lubridate::hours(hour_off)
     }
   }
 
@@ -77,7 +77,4 @@ print(all[,-4])
 }
 
 
-  create_schedule(default=1,
-                  period=c("2021-08-26","2021-09-12"),
-                  hour_on=17,hour_off=7)
 
